@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import AuthInput from '@/components/auth/AuthInput';
+/* import AuthInput from '@/components/auth/AuthInput';
 import { IconWarn } from '@/components/icons';
 import useAuth from '@/data/hook/useAuth';
 import { useState } from 'react';
@@ -137,3 +137,4 @@ const Autenticacao = () => {
 };
 
 export default Autenticacao;
+ */

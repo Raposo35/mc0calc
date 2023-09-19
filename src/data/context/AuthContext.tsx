@@ -1,4 +1,4 @@
-import route from 'next/router';
+/* import route from 'next/router';
 import firebase from '@/firebase/config';
 import Usuario from '@/model/Usuario';
 import { createContext, useEffect, useState } from 'react';
@@ -105,3 +105,4 @@ export const AuthProvider = (props: any) => {
 };
 
 export default AuthContext;
+ */
