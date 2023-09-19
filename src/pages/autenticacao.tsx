@@ -5,7 +5,7 @@ import useAuth from '@/data/hook/useAuth';
 import { useState } from 'react';
 
 const Autenticacao = () => {
-	const { usuario, loginGoogle } = useAuth();
+	const { cadastrar, login, loginGoogle } = useAuth();
 
 	const [modo, setModo] = useState<'login' | 'cadastro'>('login');
 	const [email, setEmail] = useState('');
@@ -17,15 +17,17 @@ const Autenticacao = () => {
 		setTimeout(() => setErro(null), tempoEmSegundos * 1000);
 	};
 
-	const submeter = () => {
-		if (modo === 'login') {
-			console.log('Login');
-			exibiErro('Ocorreu um erro no login!!', 2);
-		} else {
-			console.log('cadastrar');
-			exibiErro('Ocorreu um erro no cadastro!!', 2);
+	async function submeter() {
+		try {
+			if (modo === 'login') {
+				await login?.(email, senha);
+			} else {
+				await cadastrar?.(email, senha);
+			}
+		} catch (e) {
+			exibiErro('Erro desconhecido');
 		}
-	};
+	}
 
 	return (
 		<div className={`flex h-screen items-center justify-center `}>
