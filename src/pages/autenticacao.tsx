@@ -5,7 +5,7 @@ import useAuth from '@/data/hook/useAuth';
 import { useState } from 'react';
 
 const Autenticacao = () => {
-	const { cadastrar, login, loginGoogle } = useAuth();
+	const { cadastrar, login } = useAuth();
 
 	const [modo, setModo] = useState<'login' | 'cadastro'>('login');
 	const [email, setEmail] = useState('');
@@ -90,21 +90,6 @@ const Autenticacao = () => {
 					{modo === 'login' ? 'Entrar' : 'Cadastrar'}
 				</button>
 				<hr className="my-6 border-gray-300 w-full" />
-
-				{modo === 'login' ? (
-					<button
-						onClick={loginGoogle}
-						className={`
-			w-full bg-red-500 hover:bg-red-400
-			text-white rounded-lg px-4 py-3 
-			
-			`}
-					>
-						Entrar no Google
-					</button>
-				) : (
-					false
-				)}
 
 				{modo === 'login' ? (
 					<p className="mt-3">
