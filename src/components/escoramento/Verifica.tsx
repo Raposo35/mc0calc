@@ -56,6 +56,11 @@ export const Verifica = () => {
 									<Barra percent={ctxPropPrim?.barraApoioEsc} />
 									<div>{Math.ceil(ctxPropPrim?.barraApoioEsc)}%</div>
 								</>
+							) : ctxBtn?.pro === '' ? (
+								<>
+									<Barra percent={ctxPropPrim?.barraApoioEsc} />
+									<div>{Math.ceil(ctxPropPrim?.barraApoioEsc)}%</div>
+								</>
 							) : (
 								<>
 									<Barra percent={ctxPropPrim?.barraApoioPro} />
