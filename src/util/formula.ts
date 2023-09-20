@@ -781,3 +781,74 @@ export const torres = (torres: string, baseLTT: string, baseExtra: string) => {
 	}
 	return carga;
 };
+
+export const prolongador = (altura: number, escora: string) => {
+	let carga: any = 0;
+
+	if (escora === '0' || escora === '1') {
+		if (altura < 240) {
+			return 'MUDAR ESCORA';
+		} else if (altura >= 240 && altura < 270) {
+			return (carga = 2500);
+		} else if (altura >= 270 && altura < 280) {
+			return (carga = 2400);
+		} else if (altura >= 280 && altura < 290) {
+			return (carga = 2300);
+		} else if (altura >= 290 && altura < 300) {
+			return (carga = 2150);
+		} else if (altura >= 300 && altura < 310) {
+			return (carga = 2000);
+		} else if (altura >= 310 && altura < 320) {
+			return (carga = 1850);
+		} else if (altura >= 320 && altura < 330) {
+			return (carga = 1700);
+		} else if (altura >= 330 && altura < 340) {
+			return (carga = 1550);
+		} else if (altura >= 340 && altura < 350) {
+			return (carga = 1400);
+		} else if (altura >= 350 && altura < 360) {
+			return (carga = 1250);
+		} else if (altura >= 360 && altura < 370) {
+			return (carga = 1100);
+		} else if (altura >= 370 && altura < 380) {
+			return (carga = 1000);
+		} else if (altura >= 380 && altura < 390) {
+			return (carga = 900);
+		} else if (altura >= 390 && altura < 400) {
+			return (carga = 800);
+		} else if (altura >= 400 && altura < 410) {
+			return (carga = 700);
+		} else if (altura >= 410 && altura < 420) {
+			return (carga = 600);
+		} else {
+			return 'MUDAR ESCORA';
+		}
+	} else if (escora === '4') {
+		if (altura < 500) {
+			return 'SOMENTE COM H > 5,00m';
+		} else if (altura >= 500 && altura < 510) {
+			return (carga = 3200);
+		} else if (altura >= 510 && altura < 520) {
+			return (carga = 3100);
+		} else if (altura >= 520 && altura < 530) {
+			return (carga = 2900);
+		} else if (altura >= 530 && altura < 540) {
+			return (carga = 2750);
+		} else if (altura >= 540 && altura < 550) {
+			return (carga = 2600);
+		} else if (altura >= 550 && altura < 560) {
+			return (carga = 2500);
+		} else if (altura >= 560 && altura < 570) {
+			return (carga = 2300);
+		} else if (altura >= 570 && altura < 580) {
+			return (carga = 2200);
+		} else if (altura >= 580 && altura < 590) {
+			return (carga = 2100);
+		} else if (altura >= 590 && altura < 600) {
+			return (carga = 2000);
+		} else {
+			return 'SOMENTE COM H > 5,00m';
+		}
+	}
+	return carga;
+};

@@ -110,16 +110,30 @@ export const ApoioEsc = () => {
 							/>
 						</div>
 						<div className="w-full flex justify-between p-2 bg-red-200 mb-3 rounded-md  dark:text-black ">
-							<span className="text-sm">Prolongador =</span>
-							<Select
-								options={optionsPro}
-								value={ctxBtn?.pro}
-								onChange={handleSelectPro}
-							/>
+							{ctxBtn?.esc === '2' ? (
+								<span className="text-sm">Prolongador = desabilitado</span>
+							) : ctxBtn?.esc === '3' ? (
+								<span className="text-sm">Prolongador = desabilitado</span>
+							) : (
+								<>
+									<span className="text-sm">Prolongador =</span>
+									<Select
+										options={optionsPro}
+										value={ctxBtn?.pro}
+										onChange={handleSelectPro}
+									/>
+								</>
+							)}
 						</div>
-						<div className="p-2 bg-red-200 rounded-md mb-3 text-sm  dark:text-black">
-							Carga Admissível (kgf)= {ctxPropPrim?.cargaEscora}
-						</div>
+						{ctxBtn?.pro === '0' ? (
+							<div className="p-2 bg-red-200 rounded-md mb-3 text-sm  dark:text-black">
+								Carga Admissível (kgf)= {ctxPropPrim?.cargaEscora}
+							</div>
+						) : (
+							<div className="p-2 bg-red-200 rounded-md mb-3 text-sm  dark:text-black">
+								Carga Admissível (kgf)= {ctxPropPrim?.cargaProlongador}
+							</div>
+						)}
 					</>
 				)}
 			</div>

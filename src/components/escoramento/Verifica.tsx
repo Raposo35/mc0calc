@@ -1,8 +1,7 @@
 import { useContext } from 'react';
-import Barra from '../basic/Barra';
 
 import { VaoCompContext } from '@/data/context/VaoCompContext';
-import BarraCompensado from '../basic/BarraCompensado';
+import Barra from '../basic/Barra';
 import { PropPrimContext } from '@/data/context/PropPrimContext';
 import { BtnContext } from '@/data/context/BtnContext';
 
@@ -21,7 +20,7 @@ export const Verifica = () => {
 			<div>
 				<div className="w-full flex justify-between mb-3 p-2 bg-red-200 rounded-md  dark:text-black ">
 					<div className="text-sm w-32">Compensado</div>
-					<BarraCompensado percent={ctxComp?.barraComp} />
+					<Barra percent={ctxComp?.barraComp} />
 					<div>{ctxComp?.barraComp}%</div>
 				</div>
 				<div className="w-full flex justify-between mb-3 p-2 bg-red-200 rounded-md  dark:text-black ">
@@ -44,8 +43,17 @@ export const Verifica = () => {
 					) : (
 						<>
 							<div className="text-sm w-32">Carga no apoio</div>
-							<Barra percent={ctxPropPrim?.barraApoioEsc} />
-							<div>{Math.ceil(ctxPropPrim?.barraApoioEsc)}%</div>
+							{ctxBtn?.pro === '0' ? (
+								<>
+									<Barra percent={ctxPropPrim?.barraApoioEsc} />
+									<div>{Math.ceil(ctxPropPrim?.barraApoioEsc)}%</div>
+								</>
+							) : (
+								<>
+									<Barra percent={ctxPropPrim?.barraApoioPro} />
+									<div>{Math.ceil(ctxPropPrim?.barraApoioPro)}%</div>
+								</>
+							)}
 						</>
 					)}
 				</div>

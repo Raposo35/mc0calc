@@ -13,6 +13,7 @@ import {
 	isoCalc_4Esc,
 	mViga,
 	pViga,
+	prolongador,
 	torres,
 	vaoPeloMomentoPerfil,
 } from '@/util/formula';
@@ -73,6 +74,8 @@ interface PropPrimContextType {
 	barraApoioEsc: any;
 	cargaTorres: any;
 	barraApoioTorre: any;
+	cargaProlongador: any;
+	barraApoioPro: any;
 }
 
 export const PropPrimContext = createContext<PropPrimContextType | null>(null);
@@ -111,18 +114,15 @@ export const PropPrimContextProvider = ({
 	// primário
 
 	const [perfil, setPerfil] = useState('3');
-	const [vao1, setVao1] = useState(155);
-	const [vao2, setVao2] = useState(200);
-	const [vao3, setVao3] = useState(155);
+	const [vao1, setVao1] = useState(50);
+	const [vao2, setVao2] = useState(50);
+	const [vao3, setVao3] = useState(50);
 	const [vao4, setVao4] = useState(100);
-	const [vao5, setVao5] = useState(170);
+	const [vao5, setVao5] = useState(50);
 	const [vao6, setVao6] = useState(100);
 
 	const [selectedButton, setSelectedButton] = useState<number>(1);
 	const [valor, setValor] = useState<any>(null);
-
-	const vaoMax = Math.max(vao1, vao2, vao3);
-	const barraSec = Math.floor((vaoMax / vaoAdotadoSec) * 100);
 
 	const alturaViga = hViga(perfil);
 
@@ -167,6 +167,9 @@ export const PropPrimContextProvider = ({
 		}
 	};
 
+	const vaoMax = Math.max(vao1, vao2, vao3);
+	const barraSec = Math.ceil((vaoMax / vaoAdotadoSec) * 100);
+
 	const carga = resultadoM();
 	const cargaF = resultadoF();
 
@@ -176,7 +179,7 @@ export const PropPrimContextProvider = ({
 	const vaoMaximo = Math.min(vaoPrimM, vaoPrimF).toFixed(0);
 
 	const vaoMaxPrim = Math.max(vao4, vao5, vao6);
-	const barraPrim = Math.floor((vaoMaxPrim / +vaoMaximo) * 100);
+	const barraPrim = Math.ceil((vaoMaxPrim / +vaoMaximo) * 100);
 
 	const isoF_3Esc = isoCalc_3Esc(+carga, vao4, vao5);
 	const isoF_4Esc = isoCalc_4Esc(+carga, vao4, vao5, vao6);
@@ -210,10 +213,15 @@ export const PropPrimContextProvider = ({
 		ctxPropComp?.espessura / 10;
 
 	const cargaEscora = escoras(alturaApoio, ctxBtn?.esc);
+	const cargaProlongador = prolongador(alturaApoio, ctxBtn?.esc);
+
+	console.log(cargaProlongador);
+
 	const barraApoioEsc = (valor / cargaEscora) * 100;
+	const barraApoioPro = (valor / cargaProlongador) * 100;
 	const cargaTorres = torres(ctxBtn?.torre, ctxBtn?.baseLTT, ctxBtn?.baseExtra);
 
-	const barraApoioTorre = (valor / cargaTorres) * 100;
+	const barraApoioTorre = Math.ceil((valor / cargaTorres) * 100);
 
 	const contextValue = {
 		perfil,
@@ -265,6 +273,8 @@ export const PropPrimContextProvider = ({
 		barraApoioEsc,
 		cargaTorres,
 		barraApoioTorre,
+		cargaProlongador,
+		barraApoioPro,
 	};
 
 	return (

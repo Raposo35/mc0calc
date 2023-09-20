@@ -4,9 +4,9 @@ interface LifeBarProps {
 
 const Barra: React.FC<LifeBarProps> = ({ percent }) => {
 	const getColor = () => {
-		if (percent >= 100) {
+		if (percent > 100) {
 			return 'bg-red-500';
-		} else if (percent >= 90) {
+		} else if (percent >= 95) {
 			return 'bg-yellow-500';
 		} else {
 			return 'bg-green-500';
