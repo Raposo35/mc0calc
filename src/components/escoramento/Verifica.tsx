@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { VaoCompContext } from '@/data/context/VaoCompContext';
 import Barra from '../basic/Barra';
@@ -9,6 +9,14 @@ export const Verifica = () => {
 	const ctxComp = useContext(VaoCompContext);
 	const ctxPropPrim = useContext(PropPrimContext);
 	const ctxBtn = useContext(BtnContext);
+
+	const setarProlongador = () => {
+		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '2') ctxBtn?.setPro('');
+	};
+
+	useEffect(() => {
+		setarProlongador();
+	});
 
 	return (
 		<div className="w-full bg-gray-100 p-2 rounded-lg mt-5 ">
