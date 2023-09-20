@@ -53,6 +53,8 @@ export const ApoioEsc = () => {
 	const optionsEsc = ['STANDARD', 'PLUS', 'EXTRA', 'SUPER', 'LUME'];
 	const optionsPro = ['SEM PROLONGADOR', 'COM PROLONGADOR'];
 
+	console.log(ctxPropPrim?.cargaProlongador);
+
 	return (
 		<div className="w-1/3 bg-gray-100 p-3 rounded-lg mt-5 ">
 			<div className="flex justify-between mb-3">
@@ -125,13 +127,13 @@ export const ApoioEsc = () => {
 								</>
 							)}
 						</div>
-						{ctxBtn?.pro === '0' ? (
+						{ctxBtn?.pro === '1' ? (
 							<div className="p-2 bg-red-200 rounded-md mb-3 text-sm  dark:text-black">
-								Carga Admissível (kgf)= {ctxPropPrim?.cargaEscora}
+								Carga Admissível (kgf)= {ctxPropPrim?.cargaProlongador}
 							</div>
 						) : (
 							<div className="p-2 bg-red-200 rounded-md mb-3 text-sm  dark:text-black">
-								Carga Admissível (kgf)= {ctxPropPrim?.cargaProlongador}
+								Carga Admissível (kgf)= {ctxPropPrim?.cargaEscora}
 							</div>
 						)}
 					</>

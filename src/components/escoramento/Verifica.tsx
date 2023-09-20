@@ -10,6 +10,8 @@ export const Verifica = () => {
 	const ctxPropPrim = useContext(PropPrimContext);
 	const ctxBtn = useContext(BtnContext);
 
+	console.log(ctxPropPrim?.barraApoioPro);
+
 	return (
 		<div className="w-full bg-gray-100 p-2 rounded-lg mt-5 ">
 			<div className="flex justify-between mb-2">

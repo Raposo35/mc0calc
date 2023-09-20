@@ -215,10 +215,11 @@ export const PropPrimContextProvider = ({
 	const cargaEscora = escoras(alturaApoio, ctxBtn?.esc);
 	const cargaProlongador = prolongador(alturaApoio, ctxBtn?.esc);
 
-	console.log(cargaProlongador);
-
 	const barraApoioEsc = (valor / cargaEscora) * 100;
 	const barraApoioPro = (valor / cargaProlongador) * 100;
+
+	console.log(cargaProlongador);
+
 	const cargaTorres = torres(ctxBtn?.torre, ctxBtn?.baseLTT, ctxBtn?.baseExtra);
 
 	const barraApoioTorre = Math.ceil((valor / cargaTorres) * 100);
