@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Select from '../basic/Select';
 import Button from '../basic/Button';
 import { BtnContext } from '@/data/context/BtnContext';
@@ -53,7 +53,13 @@ export const ApoioEsc = () => {
 	const optionsEsc = ['STANDARD', 'PLUS', 'EXTRA', 'SUPER', 'LUME'];
 	const optionsPro = ['SEM PROLONGADOR', 'COM PROLONGADOR'];
 
-	console.log(ctxPropPrim?.cargaProlongador);
+	const setarProlongador = () => {
+		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '2') ctxBtn?.setPro('0');
+	};
+
+	useEffect(() => {
+		setarProlongador();
+	});
 
 	return (
 		<div className="w-1/3 bg-gray-100 p-3 rounded-lg mt-5 ">
