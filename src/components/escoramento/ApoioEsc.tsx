@@ -54,7 +54,7 @@ export const ApoioEsc = () => {
 	const optionsPro = ['SEM PROLONGADOR', 'COM PROLONGADOR'];
 
 	const setarProlongador = () => {
-		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '2') ctxBtn?.setPro('');
+		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '3') ctxBtn?.setPro('');
 	};
 
 	useEffect(() => {
