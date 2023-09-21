@@ -11,7 +11,7 @@ export const Verifica = () => {
 	const ctxBtn = useContext(BtnContext);
 
 	const setarProlongador = () => {
-		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '2') ctxBtn?.setPro('');
+		if (ctxBtn?.esc === '2' || ctxBtn?.esc === '3') ctxBtn?.setPro('');
 	};
 
 	useEffect(() => {
