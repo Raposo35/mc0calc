@@ -40,11 +40,6 @@ export const CargaEsc = () => {
 		ctxPropPrim?.setVao6(newValue);
 	};
 
-	const reset = () => {
-		handleButtonClick(1, Math.ceil(ctxPropPrim?.RA));
-		return false;
-	};
-
 	return (
 		<div className="w-full bg-gray-100 p-4 rounded-lg  ">
 			<div className="flex justify-end">
@@ -241,7 +236,7 @@ export const CargaEsc = () => {
 						value={ctxPropPrim?.valor}
 					/>
 				) : (
-					reset()
+					false
 				)}
 			</div>
 		</div>
