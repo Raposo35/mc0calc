@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { PropPrimContext } from '@/data/context/PropPrimContext';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Button from '../basic/Button';
 import { BtnContext } from '@/data/context/BtnContext';
 import ButtonCarga from '../basic/ButtonCarga';
@@ -38,6 +38,11 @@ export const CargaEsc = () => {
 	const handleVao6Change = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const newValue = event.target.value;
 		ctxPropPrim?.setVao6(newValue);
+	};
+
+	const reset = () => {
+		handleButtonClick(1, Math.ceil(ctxPropPrim?.RA));
+		return false;
 	};
 
 	return (
@@ -236,7 +241,7 @@ export const CargaEsc = () => {
 						value={ctxPropPrim?.valor}
 					/>
 				) : (
-					false
+					reset()
 				)}
 			</div>
 		</div>

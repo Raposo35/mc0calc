@@ -1,5 +1,5 @@
 interface LifeBarProps {
-	percent: number;
+	percent: any;
 }
 
 const Barra: React.FC<LifeBarProps> = ({ percent }) => {

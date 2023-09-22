@@ -122,7 +122,6 @@ export const PropPrimContextProvider = ({
 	const [vao6, setVao6] = useState(100);
 
 	const [selectedButton, setSelectedButton] = useState<number>(1);
-	const [valor, setValor] = useState<any>(null);
 
 	const alturaViga = hViga(perfil);
 
@@ -204,6 +203,8 @@ export const PropPrimContextProvider = ({
 	const RB = cargas[1];
 	const RC = cargas[2];
 	const RD = cargas[3];
+
+	const [valor, setValor] = useState(RA);
 
 	const alturaApoio =
 		ctxPropComp?.peDireito -
