@@ -66,8 +66,10 @@ interface PropPrimContextType {
 	barraSec: any;
 	barraPrim: any;
 	alturaApoio: any;
-	selectedButton: any;
-	setSelectedButton: (n: any) => void;
+	selectedButton3: any;
+	setSelectedButton3: (n: any) => void;
+	selectedButton4: any;
+	setSelectedButton4: (n: any) => void;
 	valor: any;
 	setValor: (n: any) => void;
 	cargaEscora: any;
@@ -121,7 +123,8 @@ export const PropPrimContextProvider = ({
 	const [vao5, setVao5] = useState(50);
 	const [vao6, setVao6] = useState(100);
 
-	const [selectedButton, setSelectedButton] = useState<number>(1);
+	const [selectedButton3, setSelectedButton3] = useState<number>(1);
+	const [selectedButton4, setSelectedButton4] = useState<number>(1);
 
 	const alturaViga = hViga(perfil);
 
@@ -265,8 +268,10 @@ export const PropPrimContextProvider = ({
 		vaoAdotadoSec,
 		barraSec,
 		alturaApoio,
-		selectedButton,
-		setSelectedButton,
+		selectedButton3,
+		setSelectedButton3,
+		selectedButton4,
+		setSelectedButton4,
 		valor,
 		setValor,
 		cargaEscora,

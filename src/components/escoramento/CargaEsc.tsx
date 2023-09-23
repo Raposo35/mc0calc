@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { PropPrimContext } from '@/data/context/PropPrimContext';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import Button from '../basic/Button';
 import { BtnContext } from '@/data/context/BtnContext';
 import ButtonCarga from '../basic/ButtonCarga';
@@ -10,8 +10,14 @@ export const CargaEsc = () => {
 	const ctxPropPrim = useContext(PropPrimContext);
 	const ctxBtn = useContext(BtnContext);
 
-	const handleButtonClick = (button: number, value: any) => {
-		ctxPropPrim?.setSelectedButton(button);
+	const handleButtonClick3 = (button: number, value: any) => {
+		ctxPropPrim?.setSelectedButton3(button);
+		const valor = ctxPropPrim?.setValor(value);
+		return valor;
+	};
+
+	const handleButtonClick4 = (button: number, value: any) => {
+		ctxPropPrim?.setSelectedButton4(button);
 		const valor = ctxPropPrim?.setValor(value);
 		return valor;
 	};
@@ -51,7 +57,6 @@ export const CargaEsc = () => {
 					<Button onClick={handleBtnIso1} label={ctxBtn?.btnIsoEsc} />
 				</div>
 			</div>
-
 			{ctxBtn?.btnApoioPrim === '3' && ctxBtn.btnApoioEsc_ === '3' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4">
 					<img
@@ -88,7 +93,6 @@ export const CargaEsc = () => {
 			) : (
 				false
 			)}
-
 			{ctxBtn?.btnApoioPrim === '3' && ctxBtn.btnApoioEsc_ === '4' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={700} />
@@ -129,7 +133,6 @@ export const CargaEsc = () => {
 			) : (
 				false
 			)}
-
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '3' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={780} />
@@ -164,7 +167,6 @@ export const CargaEsc = () => {
 			) : (
 				false
 			)}
-
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '4' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={790} />
@@ -209,36 +211,56 @@ export const CargaEsc = () => {
 				false
 			)}
 
-			<div className=" w-full gap-3 flex justify-between mt-5 rounded-md  bg-red-200">
-				<ButtonCarga
-					label={`Carga apoio RA (kgf) = ${Math.ceil(ctxPropPrim?.RA)}`}
-					isSelected={ctxPropPrim?.selectedButton === 1}
-					onClick={() => handleButtonClick(1, Math.ceil(ctxPropPrim?.RA))}
-					value={ctxPropPrim?.valor}
-				/>
-				<ButtonCarga
-					label={`Carga apoio RB (kgf) = ${Math.ceil(ctxPropPrim?.RB)}`}
-					isSelected={ctxPropPrim?.selectedButton === 2}
-					onClick={() => handleButtonClick(2, Math.ceil(ctxPropPrim?.RB))}
-					value={ctxPropPrim?.valor}
-				/>
-				<ButtonCarga
-					label={`Carga apoio RC (kgf) = ${Math.ceil(ctxPropPrim?.RC)}`}
-					isSelected={ctxPropPrim?.selectedButton === 3}
-					onClick={() => handleButtonClick(3, Math.ceil(ctxPropPrim?.RC))}
-					value={ctxPropPrim?.valor}
-				/>
-				{ctxPropPrim?.RD !== undefined ? (
+			{ctxBtn?.btnApoioEsc_ === '3' ? (
+				<div className=" w-full gap-3 flex justify-between mt-5 rounded-md  bg-red-200">
 					<ButtonCarga
-						label={`Carga apoio RD (kgf) = ${Math.ceil(ctxPropPrim?.RD)}`}
-						isSelected={ctxPropPrim?.selectedButton === 4}
-						onClick={() => handleButtonClick(4, Math.ceil(ctxPropPrim?.RD))}
+						label={`Carga apoio RA (kgf) = ${Math.ceil(ctxPropPrim?.RA)}`}
+						isSelected={ctxPropPrim?.selectedButton3 === 1}
+						onClick={() => handleButtonClick3(1, Math.ceil(ctxPropPrim?.RA))}
 						value={ctxPropPrim?.valor}
 					/>
-				) : (
-					false
-				)}
-			</div>
+					<ButtonCarga
+						label={`Carga apoio RB (kgf) = ${Math.ceil(ctxPropPrim?.RB)}`}
+						isSelected={ctxPropPrim?.selectedButton3 === 2}
+						onClick={() => handleButtonClick3(2, Math.ceil(ctxPropPrim?.RB))}
+						value={ctxPropPrim?.valor}
+					/>
+					<ButtonCarga
+						label={`Carga apoio RC (kgf) = ${Math.ceil(ctxPropPrim?.RC)}`}
+						isSelected={ctxPropPrim?.selectedButton3 === 3}
+						onClick={() => handleButtonClick3(3, Math.ceil(ctxPropPrim?.RC))}
+						value={ctxPropPrim?.valor}
+					/>
+				</div>
+			) : (
+				<div className=" w-full gap-3 flex justify-between mt-5 rounded-md  bg-red-200">
+					<ButtonCarga
+						label={`Carga apoio RA (kgf) = ${Math.ceil(ctxPropPrim?.RA)}`}
+						isSelected={ctxPropPrim?.selectedButton4 === 1}
+						onClick={() => handleButtonClick4(1, Math.ceil(ctxPropPrim?.RA))}
+						value={ctxPropPrim?.valor}
+					/>
+					<ButtonCarga
+						label={`Carga apoio RB (kgf) = ${Math.ceil(ctxPropPrim?.RB)}`}
+						isSelected={ctxPropPrim?.selectedButton4 === 2}
+						onClick={() => handleButtonClick4(2, Math.ceil(ctxPropPrim?.RB))}
+						value={ctxPropPrim?.valor}
+					/>
+					<ButtonCarga
+						label={`Carga apoio RC (kgf) = ${Math.ceil(ctxPropPrim?.RC)}`}
+						isSelected={ctxPropPrim?.selectedButton4 === 3}
+						onClick={() => handleButtonClick4(3, Math.ceil(ctxPropPrim?.RC))}
+						value={ctxPropPrim?.valor}
+					/>
+
+					<ButtonCarga
+						label={`Carga apoio RD (kgf) = ${Math.ceil(ctxPropPrim?.RD)}`}
+						isSelected={ctxPropPrim?.selectedButton4 === 4}
+						onClick={() => handleButtonClick4(4, Math.ceil(ctxPropPrim?.RD))}
+						value={ctxPropPrim?.valor}
+					/>
+				</div>
+			)}
 		</div>
 	);
 };
