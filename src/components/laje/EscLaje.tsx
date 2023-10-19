@@ -42,11 +42,9 @@ export const EscLaje = () => {
 								<CargaEsc />
 							</div>
 
-							<div className="flex gap-5 w-full sm:flex-col sm:w-full">
+							<div className="flex flex-col gap-5 lg:flex-row">
 								<ApoioEsc />
-								<div className="w-2/3 flex-1 sm:w-full">
-									<Verifica />
-								</div>
+								<Verifica />
 							</div>
 						</>
 					</PropPrimContextProvider>
