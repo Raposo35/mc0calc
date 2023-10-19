@@ -23,7 +23,7 @@ export const EscLaje = () => {
 				<VaoCompContextProvider>
 					<PropPrimContextProvider>
 						<>
-							<div className="w-full flex flex-wrap gap-5  items-center  lg:flex-nowrap sm:justify-center sm:w-full">
+							<div className="w-full  flex flex-wrap gap-5  items-center  lg:flex-nowrap sm:justify-center sm:w-full">
 								<DimLaje />
 								<PropComp />
 								<VaoComp />

@@ -65,13 +65,13 @@ export const CargaEsc = () => {
 						width={700}
 						className="relative"
 					/>
-					<span className="absolute mt-11 -ml-64  dark:text-black lg:mt-14 ">
+					<span className="absolute mt-12 -ml-64  dark:text-black lg:mt-14 ">
 						{ctxPropPrim?.vao1} cm
 					</span>
-					<span className="absolute mt-11 ml-40  dark:text-black lg:mt-14 ">
+					<span className="absolute mt-12 ml-40  dark:text-black lg:mt-14 ">
 						{ctxPropPrim?.vao2} cm
 					</span>
-					<div className="absolute mt-36 mr-4 -rotate-90 dark:text-black lg:mt-44 lg:mr-4">
+					<div className="absolute mt-40 mr-4 -rotate-90 dark:text-black lg:mt-44 lg:mr-4">
 						<input
 							type="number"
 							className=" w-14 text-right cursor-pointer"
@@ -96,13 +96,13 @@ export const CargaEsc = () => {
 			{ctxBtn?.btnApoioPrim === '3' && ctxBtn.btnApoioEsc_ === '4' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={700} />
-					<span className="absolute mt-14 -ml-60  dark:text-black">
+					<span className="absolute mt-12 -ml-60  dark:text-black lg:mt-14 lg:-ml-60">
 						{ctxPropPrim?.vao1} cm
 					</span>
-					<span className="absolute mt-14 ml-40  dark:text-black">
+					<span className="absolute mt-12 ml-40  dark:text-black lg:mt-14 lg:ml-40">
 						{ctxPropPrim?.vao2} cm
 					</span>
-					<div className="absolute mt-40  mr-4 -rotate-90 dark:text-black">
+					<div className="absolute mt-40  mr-4 -rotate-90 dark:text-black lg:mt-44  lg:mr-4">
 						<input
 							type="number"
 							className=" w-14 text-right cursor-pointer"
@@ -111,7 +111,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute mt-96 mr-4 -rotate-90 dark:text-black ">
+					<div className="absolute mt-80 mr-4 -rotate-90 dark:text-black lg:mt-96 lg:mr-4 ">
 						<input
 							type="number"
 							className=" w-14 text-right cursor-pointer"
@@ -120,7 +120,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute bottom-36 mr-4 -rotate-90 dark:text-black">
+					<div className="absolute bottom-32 mr-4 -rotate-90 dark:text-black lg:bottom-36 lg:mr-4">
 						<input
 							type="number"
 							className=" w-14 text-right cursor-pointer"
@@ -136,28 +136,28 @@ export const CargaEsc = () => {
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '3' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={780} />
-					<span className="absolute mt-7 -ml-80  dark:text-black lg:mt-11 lg:-ml-96">
+					<span className="absolute mt-8 -ml-80  dark:text-black lg:mt-11 lg:-ml-96">
 						{ctxPropPrim?.vao1} cm
 					</span>
-					<span className="absolute mt-7  dark:text-black lg:mt-11 ">
+					<span className="absolute mt-8  dark:text-black lg:mt-11 ">
 						{ctxPropPrim?.vao2} cm
 					</span>
-					<span className="absolute mt-7 -mr-72  dark:text-black lg:mt-11 lg:-mr-96 ">
+					<span className="absolute mt-8 -mr-72  dark:text-black lg:mt-11 lg:-mr-96 ">
 						{ctxPropPrim?.vao3} cm
 					</span>
 					<div className="absolute mt-28 mr-40 -rotate-90 dark:text-black lg:mt-36 lg:-ml-12">
 						<input
 							type="number"
-							className=" w-14 text-right cursor-pointer"
+							className=" w-14 h-3 lg:h5 text-right cursor-pointer"
 							value={ctxPropPrim?.vao4}
 							onChange={handleVao4Change}
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute mt-60 mr-40 -rotate-90 dark:text-black lg:mt-80 lg:-ml-12">
+					<div className="absolute mt-64 mr-40 -rotate-90 dark:text-black lg:mt-80 lg:-ml-12">
 						<input
 							type="number"
-							className=" w-14 text-right cursor-pointer"
+							className=" w-14 h-3 lg:h5 text-right cursor-pointer"
 							value={ctxPropPrim?.vao5}
 							onChange={handleVao5Change}
 						/>
@@ -170,16 +170,16 @@ export const CargaEsc = () => {
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '4' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={790} />
-					<span className="absolute mt-7 -ml-80  dark:text-black lg:mt-12 lg:-ml-96">
+					<span className="absolute mt-8 -ml-80  dark:text-black lg:mt-12 lg:-ml-96">
 						{ctxPropPrim?.vao1} cm
 					</span>
-					<span className="absolute mt-7 dark:text-black lg:mt-12">
+					<span className="absolute mt-8 dark:text-black lg:mt-12">
 						{ctxPropPrim?.vao2} cm
 					</span>
-					<span className="absolute mt-7 -mr-72 dark:text-black lg:mt-12 lg:-mr-96">
+					<span className="absolute mt-8 -mr-72 dark:text-black lg:mt-12 lg:-mr-96">
 						{ctxPropPrim?.vao3} cm
 					</span>
-					<div className="absolute mt-28 -ml-36 -rotate-90 dark:text-black lg:mt-36  lg:-ml-52">
+					<div className="absolute mt-28 -ml-40 -rotate-90 dark:text-black lg:mt-36  lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5 text-right cursor-pointer"
@@ -188,7 +188,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute mt-60 -ml-36 -rotate-90 dark:text-black lg:mt-80 lg:-ml-52">
+					<div className="absolute mt-64 -ml-40 -rotate-90 dark:text-black lg:mt-80 lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5  text-right cursor-pointer"
@@ -197,7 +197,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute bottom-20 -ml-36 -rotate-90 dark:text-black lg:bottom-28 lg:-ml-52">
+					<div className="absolute bottom-20 -ml-40 -rotate-90 dark:text-black lg:bottom-28 lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5  text-right cursor-pointer"
