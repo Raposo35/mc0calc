@@ -6,7 +6,7 @@ export const VaoSec = () => {
 	const ctxPropPrim = useContext(PropPrimContext);
 
 	return (
-		<div className="w-1/2 bg-gray-100 p-3 rounded-lg ">
+		<div className="w-1/2 bg-gray-100 p-3 rounded-lg sm:w-full ">
 			<h1 className="text-center text-lg p-2  dark:text-black">
 				Vão Secundário
 			</h1>

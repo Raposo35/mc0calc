@@ -1,17 +1,33 @@
-// pages/index.js
+import React, { useState } from 'react';
+import StudentForm from '../components/pdf/StudentForm';
+import PdfGenerator from '../components/pdf/PdfGenerator';
+import { BtnContextProvider } from '@/data/context/BtnContext';
+import { PropCompContextProvider } from '@/data/context/PropCompContext';
+import { VaoCompContextProvider } from '@/data/context/VaoCompContext';
+import { PropPrimContextProvider } from '@/data/context/PropPrimContext';
 
-import React from 'react';
-import Link from 'next/link';
+const Memorial = () => {
+	const [datas, setDatas] = useState([]);
 
-const HomePage = () => {
+	const addData = (data: never) => {
+		setDatas([...datas, data]);
+	};
+
 	return (
-		<div>
-			<h1>Página Inicial</h1>
-			<Link href="/pdf" legacyBehavior>
-				<a>Gerar PDF</a>
-			</Link>
-		</div>
+		<BtnContextProvider>
+			<PropCompContextProvider>
+				<VaoCompContextProvider>
+					<PropPrimContextProvider>
+						<div>
+							<h1>Sistema de Alunos e Notas</h1>
+							<StudentForm onSubmit={addData} />
+							<PdfGenerator students={datas} />
+						</div>
+					</PropPrimContextProvider>
+				</VaoCompContextProvider>
+			</PropCompContextProvider>
+		</BtnContextProvider>
 	);
 };
 
-export default HomePage;
+export default Memorial;

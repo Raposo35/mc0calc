@@ -12,7 +12,7 @@ export const PropPrim = () => {
 	const options = ['C-05', 'C-7,5', 'AL-15', 'C-12', 'SH-20'];
 
 	return (
-		<div className="w-1/2 bg-gray-100 p-3 rounded-lg ">
+		<div className="w-1/2 bg-gray-100 p-3 rounded-lg sm:w-full ">
 			<h1 className="text-center text-lg p-2  dark:text-black mb-4">
 				Propriedade Perfil Primário
 			</h1>

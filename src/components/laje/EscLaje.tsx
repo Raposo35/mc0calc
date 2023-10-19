@@ -23,17 +23,17 @@ export const EscLaje = () => {
 				<VaoCompContextProvider>
 					<PropPrimContextProvider>
 						<>
-							<div className="w-full flex flex-wrap gap-5  items-center  lg:flex-nowrap sm:justify-center ">
+							<div className="w-full flex flex-wrap gap-5  items-center  lg:flex-nowrap sm:justify-center sm:w-full">
 								<DimLaje />
 								<PropComp />
 								<VaoComp />
 							</div>
-							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:justify-center ">
+							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:w-full ">
 								<CargaSec />
 								<PropSec />
 								<VaoSec />
 							</div>
-							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:justify-center ">
+							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:w-full ">
 								<CargaPrim />
 								<PropPrim />
 								<ApoioSec />
@@ -41,9 +41,10 @@ export const EscLaje = () => {
 							<div className="w-full mt-5">
 								<CargaEsc />
 							</div>
-							<div className="flex gap-5 w-full">
+
+							<div className="flex gap-5 w-full sm:flex-col sm:w-full">
 								<ApoioEsc />
-								<div className="w-2/3 flex-1">
+								<div className="w-2/3 flex-1 sm:w-full">
 									<Verifica />
 								</div>
 							</div>

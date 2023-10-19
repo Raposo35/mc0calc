@@ -21,7 +21,7 @@ export const PropComp = () => {
 	const options = ['110x220', '122x244'];
 
 	return (
-		<div className="w-1/2 bg-gray-100 p-3 rounded-lg ">
+		<div className="w-1/2 bg-gray-100 p-3 rounded-lg sm:w-full ">
 			<h1 className="text-center text-lg p-2  dark:text-black">
 				Propriedade Compensado
 			</h1>

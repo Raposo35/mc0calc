@@ -62,7 +62,7 @@ export const ApoioEsc = () => {
 	});
 
 	return (
-		<div className="w-1/3 bg-gray-100 p-3 rounded-lg mt-5 ">
+		<div className="w-1/3 bg-gray-100 p-3 rounded-lg mt-5 sm:w-full ">
 			<div className="flex justify-between mb-3">
 				<h1 className="text-center text-lg p-2  dark:text-black">
 					Propriedade Apoio

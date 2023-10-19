@@ -7,7 +7,7 @@ const Titulo = (props: TituloProps) => {
 		<div>
 			<h1
 				className={`
-				font-black text-3xl  text-gray-900 dark:text-gray-100 sm: overflow-y-hidden    
+				font-black text-3xl  text-gray-900 dark:text-gray-100 sm: overflow-y-hidden sm:text-2xl   
       `}
 			>
 				{props.titulo}

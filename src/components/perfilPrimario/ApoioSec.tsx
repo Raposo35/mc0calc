@@ -33,7 +33,7 @@ export const ApoioSec = () => {
 	};
 
 	return (
-		<div className="w-1/2 bg-gray-100 p-3 rounded-lg ">
+		<div className="w-1/2 bg-gray-100 p-3 rounded-lg sm:w-full ">
 			<div className="flex items-center px-2 justify-between ">
 				<h1 className="text-center text-lg py-4  dark:text-black">
 					Apoio Secundário
