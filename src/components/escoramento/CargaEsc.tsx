@@ -136,7 +136,7 @@ export const CargaEsc = () => {
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '3' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={780} />
-					<span className="absolute mt-8 -ml-80  dark:text-black lg:mt-11 lg:-ml-96">
+					<span className="absolute mt-8 -ml-96  dark:text-black lg:mt-11 lg:-ml-96">
 						{ctxPropPrim?.vao1} cm
 					</span>
 					<span className="absolute mt-8  dark:text-black lg:mt-11 ">
@@ -145,7 +145,7 @@ export const CargaEsc = () => {
 					<span className="absolute mt-8 -mr-72  dark:text-black lg:mt-11 lg:-mr-96 ">
 						{ctxPropPrim?.vao3} cm
 					</span>
-					<div className="absolute mt-28 mr-40 -rotate-90 dark:text-black lg:mt-36 lg:-ml-12">
+					<div className="absolute mt-32 mr-44 -rotate-90 dark:text-black lg:mt-36 lg:-ml-9">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h5 text-right cursor-pointer"
@@ -154,7 +154,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute mt-64 mr-40 -rotate-90 dark:text-black lg:mt-80 lg:-ml-12">
+					<div className="absolute mt-72 mr-44 -rotate-90 dark:text-black lg:mt-80 lg:-ml-9">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h5 text-right cursor-pointer"
@@ -170,16 +170,16 @@ export const CargaEsc = () => {
 			{ctxBtn?.btnApoioPrim === '4' && ctxBtn.btnApoioEsc_ === '4' ? (
 				<div className="flex justify-center mt-4 rounded-md h-3/4 relative">
 					<img src={`images/${ctxBtn?.img}.png`} alt="sec" width={790} />
-					<span className="absolute mt-8 -ml-80  dark:text-black lg:mt-12 lg:-ml-96">
+					<span className="absolute mt-9 -ml-80  dark:text-black lg:mt-12 lg:-ml-96">
 						{ctxPropPrim?.vao1} cm
 					</span>
-					<span className="absolute mt-8 dark:text-black lg:mt-12">
+					<span className="absolute mt-9 dark:text-black lg:mt-12">
 						{ctxPropPrim?.vao2} cm
 					</span>
-					<span className="absolute mt-8 -mr-72 dark:text-black lg:mt-12 lg:-mr-96">
+					<span className="absolute mt-9 -mr-72 dark:text-black lg:mt-12 lg:-mr-96">
 						{ctxPropPrim?.vao3} cm
 					</span>
-					<div className="absolute mt-28 -ml-40 -rotate-90 dark:text-black lg:mt-36  lg:-ml-52">
+					<div className="absolute mt-32 -ml-44 -rotate-90 dark:text-black lg:mt-36  lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5 text-right cursor-pointer"
@@ -188,7 +188,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute mt-64 -ml-40 -rotate-90 dark:text-black lg:mt-80 lg:-ml-52">
+					<div className="absolute mt-72 -ml-44 -rotate-90 dark:text-black lg:mt-80 lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5  text-right cursor-pointer"
@@ -197,7 +197,7 @@ export const CargaEsc = () => {
 						/>
 						<span>cm</span>
 					</div>
-					<div className="absolute bottom-20 -ml-40 -rotate-90 dark:text-black lg:bottom-28 lg:-ml-52">
+					<div className="absolute bottom-24 -ml-44 -rotate-90 dark:text-black lg:bottom-28 lg:-ml-52">
 						<input
 							type="number"
 							className=" w-14 h-3 lg:h-5  text-right cursor-pointer"

@@ -29,14 +29,14 @@ export const EscLaje = () => {
 								<VaoComp />
 							</div>
 							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:w-full ">
-								<CargaSec />
 								<PropSec />
 								<VaoSec />
+								<CargaSec />
 							</div>
 							<div className="w-full flex flex-wrap gap-5 mt-5  items-center  lg:flex-nowrap sm:w-full ">
-								<CargaPrim />
 								<PropPrim />
 								<ApoioSec />
+								<CargaPrim />
 							</div>
 							<div className="w-full mt-5">
 								<CargaEsc />
